@@ -45,6 +45,8 @@ class Song
     artist_name = info[0]
     song_info = info[1].split[".mp3"]
     name = song_info[0]
+
+    song = self.new
     self.artist_name = artist_name
     self.name = name
     song
