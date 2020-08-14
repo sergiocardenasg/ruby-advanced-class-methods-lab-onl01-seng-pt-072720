@@ -30,7 +30,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    self.all.each {|song| song = self.name}
+    self.all.mao {|song| song = self.name}
   end
 
 end
