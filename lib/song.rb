@@ -33,6 +33,4 @@ class Song
     self.all.collect {|song| song == name}
   end
 
-  end
-
 end
