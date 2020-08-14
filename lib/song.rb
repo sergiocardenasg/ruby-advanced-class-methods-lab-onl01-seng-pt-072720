@@ -33,9 +33,23 @@ class Song
     self.all.find {|song| song.name == name}
   end
 
+  def self.find_or_create_by_name
+  end
+
   def self.alphabetical
       self.all.sort_by {|song| song.name}
   end
+
+  def self.new_from_filename(filename)
+    info = filename.split(" - ")
+    artist_name = info[0]
+    song_info = info[1].split[".mp3"]
+    name = song_info[0]
+    self.artist_name = artist_name
+    self.name = name
+  end
+
+  def self.create_from_filename
 
   def self.destroy_all
     self.all.clear
